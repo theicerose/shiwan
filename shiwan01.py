@@ -37,3 +37,15 @@ print(a)
 a=input("输入内容1:")
 b=input("输入内容2:")
 print(len(a+b))
+
+print("试玩")   # 字符串
+print(2333)     # 整数
+print(2.3)      #小数
+print(False)    #布尔值 Ture or false
+print(())       #元祖
+print([])       #数组
+print({})       #字典
+print("试玩"+"01")    #字符串拼接
+print("试玩"*3)
+print(1+2,3/2,4*5)    #数学运算
+print(1+1==2,2>3) 
