@@ -155,7 +155,7 @@
 #     print()
 
 # 函数/方法
-# def checkname(un):                 #def方法声明，checkname方法的名字，un方法的参数
+# def checkname(un):       #def方法声明，checkname方法的名字，un方法的参数(参数可以没有)
 #     '''    
 #     账号长度是5-8位，并且账号必须小写字母开                
 #     '''                                                  #自定义函数写说明
@@ -167,3 +167,90 @@
 #     else:
 #         print('账号的长度必须为5-8位')
 # checkname('ataaa')
+
+#返回值，返回后我们可以对这个值做其他的操作
+#而，print不可以
+# a=[1,2,3,4,5,6,7,8]
+# x=a.index(3)
+# print(a[x])
+
+# def checkname(un):       #def方法声明，checkname方法的名字，un方法的参数(参数可以没有)
+#     '''    
+#     账号长度是5-8位，并且账号必须小写字母开                
+#     '''                                                  #自定义函数写说明
+#     if len(un)>=5 and len(un)<=8:                        #下面都是方法的逻辑代码
+#         if un[0] in 'qwertyuiopasdfghjklzxcvbnm':
+#             return True                      #有return的返回值，才能print出来
+#         else:
+#             return '账号必须以小写字母开头'
+#     else:
+#         return '账号的长度必须为5-8位'
+# un=input('请输入账号：')
+# pw=input('请输入密码：')
+# if checkname(un)==True:
+#     if len(pw)>=6 and len(pw)<=12:
+#         print('账号创建成功',{un:pw})
+#     else:
+#         print("密码长度必须为6-12位") 
+# else:
+#     print(checkname(un))
+
+# 代码报错就是异常
+# try:
+#     print(1+1)
+#     print('1'+1)
+#     print(1+4)
+# except Exception as e:
+#     print('上面代码错了',e)
+
+#异常类    包->类->方法->变量（既包含，又并列）
+
+# a=input('输入你的姓名：')
+# b=input('输入你的年龄：')
+# try:                                    #用来控制用户的输入，比如输入年龄“十八”
+#     if int(b)>18:
+#       print(a,'成年了')
+#     else:
+#         print(a,'未成年')
+# except:
+#     print('请输入正确的年龄')
+
+import time                    #time包  时间
+import random                  #random  生成随机数
+import pymysql
+# for i in range(10):
+#     time.sleep(1)
+#     print(i)
+
+# a=random.randint(10,1000)
+# print(a)
+
+# pip管理第三方包
+#pip install 包名  加载第三方的包
+#pip uninstall 包名  卸载
+#pip list      查看加载了多少第三方包
+#
+#常用的第三方包：
+#pymysql   操作mysql的包
+#selenium   做web自动化的包
+#appium     做app自动化的包
+#requests   做接口自动化的包
+#xlrd       操作exl的包
+#xlwt       写入EXL的包
+
+'''练习：定义一个方法，判断用户输入的账号密码是否符合规范'''
+def checknp():
+    a=input('请输入账号：')
+    b=input('请输入密码：')
+    if len(a)>=5 and len(a)<=8:
+        if a[0] in 'qwertyuiopasdfghjklzxcvbnm':
+            if len(b)>=6 and len(b)<=12:
+                print('账号创建成功',{a,b})
+            else:
+                print('密码长度必须为6-12位')
+        else:
+            print('账号的第一位必须为小写字母')
+    else:
+        print('账号长度必须5-8位')
+
+checknp()
