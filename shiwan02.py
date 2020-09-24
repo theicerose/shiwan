@@ -239,18 +239,18 @@ import pymysql
 #xlwt       写入EXL的包
 
 '''练习：定义一个方法，判断用户输入的账号密码是否符合规范'''
-def checknp():
-    a=input('请输入账号：')
-    b=input('请输入密码：')
-    if len(a)>=5 and len(a)<=8:
-        if a[0] in 'qwertyuiopasdfghjklzxcvbnm':
-            if len(b)>=6 and len(b)<=12:
-                print('账号创建成功',{a,b})
-            else:
-                print('密码长度必须为6-12位')
-        else:
-            print('账号的第一位必须为小写字母')
-    else:
-        print('账号长度必须5-8位')
+# def checknp():
+#     a=input('请输入账号：')
+#     b=input('请输入密码：')
+#     if len(a)>=5 and len(a)<=8:
+#         if a[0] in 'qwertyuiopasdfghjklzxcvbnm':
+#             if len(b)>=6 and len(b)<=12:
+#                 print('账号创建成功',{a,b})
+#             else:
+#                 print('密码长度必须为6-12位')
+#         else:
+#             print('账号的第一位必须为小写字母')
+#     else:
+#         print('账号长度必须5-8位')
 
-checknp()
+# checknp()
